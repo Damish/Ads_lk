@@ -1,16 +1,16 @@
-package com.damishs.ads_lk.ui.notifications;
+package com.damishs.ads_lk.ui.postAd;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class PostAdViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public PostAdViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is post ad fragment");
     }
 
     public LiveData<String> getText() {
