@@ -1,14 +1,11 @@
 package com.damishs.ads_lk.ui.home;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.damishs.ads_lk.R;
 
 public class ItemProfile extends AppCompatActivity implements View.OnClickListener {
@@ -26,7 +23,7 @@ public class ItemProfile extends AppCompatActivity implements View.OnClickListen
         btnBack = findViewById(R.id.btnGoBack);
 
         Intent intent = getIntent();
-        receivedPosition=intent.getStringExtra(ResultsRecyclerView.POSITION);
+        receivedPosition=intent.getStringExtra(HomeFragment.POSITION);
 
         text1.setText(receivedPosition);
 
@@ -44,7 +41,7 @@ public class ItemProfile extends AppCompatActivity implements View.OnClickListen
         switch(view.getId()){
 
             case R.id.btnGoBack:
-                Intent intent = new Intent(this,ResultsRecyclerView.class);
+                Intent intent = new Intent(this,HomeFragment.class);
                 startActivity(intent);
                 finish();
         }

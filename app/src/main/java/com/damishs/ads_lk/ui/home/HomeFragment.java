@@ -1,5 +1,6 @@
 package com.damishs.ads_lk.ui.home;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.widget.Toast;
@@ -28,54 +32,105 @@ import com.damishs.ads_lk.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment implements MyAdapter.OnItemListener{
+public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener, AdapterView.OnItemClickListener{
 
     public static final String POSITION ="1";
     private static final String TAG = "SomeActivity";
-    private HomeViewModel homeViewModel;
-    public List<String> ItemNames = new ArrayList<>();
-    public List<ListItem> listItems = new ArrayList<>();
+    //private HomeViewModel homeViewModel;
+
+    //Data
+    public List<String> ArrImageUrl = new ArrayList<>();
+    public List<String> ArrPublishedDate = new ArrayList<>();
+    public List<String> ArrAdId = new ArrayList<>();
+    public List<String> ArrAdName = new ArrayList<>();
+    public List<String> ArrSellerName = new ArrayList<>();
+    public List<String> ArrSpecialText = new ArrayList<>();
+    public List<String> ArrPrice = new ArrayList<>();
+
+
+
+    public List<AdItem> listItems = new ArrayList<>();
     private  RecyclerView.Adapter adapter2;
     public AutoCompleteTextView actv;
+
+    public TextView SelectedACTV;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
 
         // 1. get a reference to recyclerView
         RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
 
         // 2. set layoutManger
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        //recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
         // this is data fro recycler view
-        ItemNames.add("Apple");
-        ItemNames.add("Orange");
-        ItemNames.add("Grapes");
-        ItemNames.add("Pineapple");
-        ItemNames.add("Guava");
-        ItemNames.add("Banana");
-        ItemNames.add("Cadbury");
-        ItemNames.add("Kandos");
-        ItemNames.add("Ritsbury");
-        ItemNames.add("Oreo");
-        ItemNames.add("Chocolate Biscuit");
-        ItemNames.add("Gold Marie");
+
+        ArrImageUrl.add("https://i.ytimg.com/vi/btAUXonKWJM/maxresdefault.jpg");
+        ArrImageUrl.add("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-audi-q7-mmp-1-1591218923.jpg");
+        ArrImageUrl.add("https://www.carshowroom.com.au/media/21491910/2018-jaguar-e-pace-r-dynamic-p-300-awd-36-0318.jpg");
+        ArrImageUrl.add("https://i.ytimg.com/vi/EvszYleNR4o/maxresdefault.jpg");
+        ArrImageUrl.add("https://www.ukautocenter.com/wp-content/uploads/2019/05/gallery_used-car-one2car-in-process-thailand_2458975_dyzzyJ1O002AWE668gnHjf.jpg");
+        ArrImageUrl.add("https://cnet4.cbsistatic.com/img/fBt45enJ2ezvbEOV5NvMi-JNUDY=/2018/07/12/4c0986b2-1beb-4bf5-9abe-ffee6867b9d4/2018-bmw-x3-ogi.jpg");
+        ArrImageUrl.add("https://i.ytimg.com/vi/aPVirls5qQ4/maxresdefault.jpg");
+
+        ArrPublishedDate.add("07-10-2020");
+        ArrPublishedDate.add("07-10-2020");
+        ArrPublishedDate.add("07-10-2020");
+        ArrPublishedDate.add("07-10-2020e");
+        ArrPublishedDate.add("07-10-2020");
+        ArrPublishedDate.add("06-10-2020");
+        ArrPublishedDate.add("06-10-2020");
+
+        ArrAdId.add("1");
+        ArrAdId.add("2");
+        ArrAdId.add("3");
+        ArrAdId.add("4");
+        ArrAdId.add("5");
+        ArrAdId.add("6");
+        ArrAdId.add("7");
+
+        ArrAdName.add("Mercedez Benz S400");
+        ArrAdName.add("Audi Q7");
+        ArrAdName.add("Jaguar E-Pace");
+        ArrAdName.add("BMW i8");
+        ArrAdName.add("Mercedez Benz S300");
+        ArrAdName.add("BMW X3");
+        ArrAdName.add("Audi Q5");
+
+        ArrSellerName.add("Saman");
+        ArrSellerName.add("Fernando");
+        ArrSellerName.add("Namal");
+        ArrSellerName.add("Eric");
+        ArrSellerName.add("Saman");
+        ArrSellerName.add("Perera");
+        ArrSellerName.add("Rohan");
+
+        ArrSpecialText.add("10,000Km");
+        ArrSpecialText.add("81,000Km");
+        ArrSpecialText.add("42,000Km");
+        ArrSpecialText.add("63,000Km");
+        ArrSpecialText.add("94,000Km");
+        ArrSpecialText.add("25,000Km");
+        ArrSpecialText.add("36,000Km");
+
+        ArrPrice.add("600,000");
+        ArrPrice.add("740,000");
+        ArrPrice.add("960,000");
+        ArrPrice.add("210,000");
+        ArrPrice.add("90,000");
+        ArrPrice.add("2,100,000");
+        ArrPrice.add("1,000,000");
 
 
         /////////////////////////////
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getContext(),android.R.layout.select_dialog_item,ItemNames);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getContext(),android.R.layout.select_dialog_item,ArrAdName);
 
 
         actv=root.findViewById(R.id.autoCompleteTextView);
@@ -85,21 +140,25 @@ public class HomeFragment extends Fragment implements MyAdapter.OnItemListener{
         actv.setTextColor(Color.BLUE);
         actv.setCompletionHint("Search results ");
 
+        actv.setOnItemClickListener(this);
         /////////////////////////////
 
 
 
-        for (int i=1;i<=ItemNames.size();i++){
+        for (int i=1;i<=ArrAdName.size();i++){
 
-            //Toast.makeText(this,"No of Results = " + i , Toast.LENGTH_SHORT).show();
-
-            ListItem listItem = new ListItem(ItemNames.get(i-1),"Code : 000" + (i-1));
-            listItems.add(listItem);
-
+            AdItem adlistItem = new AdItem(ArrImageUrl.get(i-1),ArrPublishedDate.get(i-1),"",ArrAdName.get(i-1),"by "+ArrSellerName.get(i-1),ArrSpecialText.get(i-1),"Rs."+ArrPrice.get(i-1));
+            listItems.add(adlistItem);
         }
 
+
+
+
+        //Toast.makeText(this.getContext(), actv.getText().toString(), Toast.LENGTH_SHORT).show();
+
+
         // 3. create an adapter
-        adapter2 = new MyAdapter(listItems,this.getContext(), this);
+        adapter2 = new MyAdapter2(listItems,this.getContext(), this);
         // 4. set adapter
         recyclerView.setAdapter(adapter2);
         // 5. set item animator to DefaultAnimator
@@ -120,13 +179,32 @@ public class HomeFragment extends Fragment implements MyAdapter.OnItemListener{
     @Override
     public void onItemClick(int position) {
 
+        actv.setCursorVisible(true);
+
         String sendPosition= String.valueOf(position+1);
 
         Log.d(TAG, "onItemClick: Clicked."  + position+1);
-        Intent intent = new Intent(getActivity(), ItemProfile.class);
+
+        Intent intent = new Intent(getActivity(), ItemProfile2.class);
+       // Intent intent = new Intent(getActivity(), ItemProfile.class);
+
         intent.putExtra(POSITION,sendPosition);
         Toast.makeText(this.getContext(), "Position:"+sendPosition, Toast.LENGTH_LONG).show();
         startActivity(intent);
         //getActivity().finish();
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
+        // fetch the user selected value
+        String item = parent.getItemAtPosition(position).toString();
+
+
+        //SelectedACTV.setText(item);
+        // create Toast with user selected value
+        Toast.makeText(this.getActivity(), "Selected Item is: \t" + item, Toast.LENGTH_LONG).show();
+
+
     }
 }
