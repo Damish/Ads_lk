@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/edit_text_border_1"
+    android:padding="5dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/qrimage"></ImageView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        >
+
+        <TextView
+            android:id="@+id/btnViewSelectedCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="17dp"
+            android:background="@drawable/edit_text_border_1"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/color_bg_gold"
+            android:text="See all">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtCategoryResults"
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="18dp"
+            android:text="no of results"
+            android:textColor="@color/color_bg_ash"
+            android:textSize="13sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtCategoryName"
+            android:layout_width="292dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="46dp"
+            android:text="Category name"
+            android:textColor="@color/color_bg_blue"
+            android:textSize="17sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>
