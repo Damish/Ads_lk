@@ -16,11 +16,13 @@
         android:name="com.damishs.ads_lk.ui.category.CategoryFragment"
         android:label="@string/title_categories"
         tools:layout="@layout/fragment_category" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.damishs.ads_lk.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.damishs.ads_lk.ui.dashboard.DashboardFragment"

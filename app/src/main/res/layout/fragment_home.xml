@@ -1,61 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/color_bg_grey"
-    android:layout_height="match_parent">
+    tools:context=".ui."
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/constraintLayout"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="188dp"
-        android:background="@color/color_bg_blue"
+        android:layout_height="117dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-
-        <TextView
-            android:id="@+id/text_home"
-            android:layout_width="136dp"
-            android:layout_height="64dp"
-            android:fontFamily="cursive"
-            android:textAlignment="center"
-            android:textColor="@color/color_bg_grey"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.075"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.043" />
-
-        <Button
-            android:id="@+id/btn_search_home"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="153dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="126dp"
-            android:background="@drawable/ic_search"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/text_home"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:background="@color/color_bg_ash"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_home"
+                android:layout_width="127dp"
+                android:layout_height="39dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="300dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="cursive"
+                android:text="Ads.lk"
+                android:textAlignment="center"
+                android:textColor="@color/color_bg_gold"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.056"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="191dp"
+                android:layout_height="29dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:paddingStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/edit_text_border_1"
+                android:cursorVisible="false"
+                android:dropDownWidth="280dp"
+                android:fontFamily="sans-serif"
+                android:hint="       Search Items"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColorHint="#969696"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_search_home"
+                app:layout_constraintHorizontal_bias="0.468"
+                app:layout_constraintStart_toEndOf="@+id/text_home"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.195">
+
+                <requestFocus></requestFocus>
+            </AutoCompleteTextView>
+
+            <Button
+                android:id="@+id/btn_search_home"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/search1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/text_home"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.571"
-            tools:layout_editor_absoluteX="-16dp" />
+            tools:layout_editor_absoluteX="-16dp"
+            android:orientation="horizontal">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/button2"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/btn_shape_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home2"
+                android:text="" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/btn_shape_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cars"
+                android:text="" />
+
+            <ImageButton
+                android:id="@+id/button4"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/btn_shape_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/map2"
+                android:text="" />
+
+            <ImageButton
+                android:id="@+id/button5"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/btn_shape_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/food2"
+                android:text="" />
+
+            <ImageButton
+                android:id="@+id/button"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/btn_shape_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/classifieds2"
+                android:text="" />
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+
+<!--        </LinearLayout>-->
+        <!--        <TextView-->
+<!--            android:id="@+id/SelectedACTV"-->
+<!--            android:layout_width="221dp"-->
+<!--            android:layout_height="53dp"-->
+<!--            android:text=""-->
+<!--            android:textSize="24sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="1.0" />-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/textHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Houses"
+                android:textAlignment="center"
+                android:textColor="#5C5C5C"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textbuilding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Vehicles"
+                android:textAlignment="center"
+                android:textColor="#5C5C5C"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textmaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="29dp"
+                android:fontFamily="sans-serif"
+                android:text="Properties"
+                android:textAlignment="center"
+                android:textColor="#5C5C5C"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textfood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Food"
+                android:textAlignment="center"
+                android:textColor="#5C5C5C"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textclassifieds"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Classifieds"
+                android:textAlignment="center"
+                android:textColor="#5C5C5C"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="186dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="221dp"
+            android:text="Most Recent Ads"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/buttonShowMostRecent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="221dp"
+            android:background="@drawable/edit_text_border_1"
+            android:paddingStart="8dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="8dp"
+            android:text="Show"
+            android:textSize="10sp"/>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:text="All Ads"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</LinearLayout>
