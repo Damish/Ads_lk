@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="6dp"
     android:background="@drawable/adapter_border_1"
     >
 
@@ -19,25 +19,25 @@
            android:layout_height="wrap_content"
            android:layout_alignParentTop="true"
            android:layout_alignParentEnd="true"
-           android:layout_marginTop="4dp"
-           android:layout_marginEnd="65dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginEnd="25dp"
            android:gravity="center"
            android:text="Date"
-           android:textSize="12sp" />
+           android:textSize="8sp" />
    </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="176dp"
-        android:layout_height="124dp"
-        android:layout_margin="10dp" />
+        android:layout_width="113dp"
+        android:layout_height="85dp"
+        android:layout_margin="4dp" />
 <!--        app:srcCompat="@drawable/qrimage"-->
 
 
     <RelativeLayout
         android:id="@+id/dxgdx"
         android:layout_width="match_parent"
-        android:layout_height="95dp">
+        android:layout_height="66dp">
 
         <TextView
             android:id="@+id/textViewAdName"
@@ -51,7 +51,7 @@
             android:layout_marginBottom="6dp"
             android:textAlignment="center"
             android:textColor="#333333"
-            android:textSize="18sp"
+            android:textSize="10sp"
             tools:text="Ad Name" />
 
         <TextView
@@ -60,13 +60,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="34dp"
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="6dp"
             android:textAlignment="center"
             android:textColor="#333333"
-            android:textSize="15sp"
+            android:textSize="10sp"
             tools:text="Seller name" />
 
         <TextView
@@ -77,13 +77,13 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="7dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="9dp"
             android:layout_marginBottom="437dp"
             android:text="Special Text"
             android:textAlignment="center"
             android:textColor="#8D8D8D"
-            android:textSize="14sp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/textViewPrice"
@@ -93,16 +93,15 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="6dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="9dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="73dp"
             android:text="Price"
             android:textAlignment="center"
-            android:textColor="#1B5E20"
-            android:textSize="14sp" />
+            android:textColor="#880E4F"
+            android:textSize="13sp" />
 
     </RelativeLayout>
-
 
 
 </LinearLayout>
