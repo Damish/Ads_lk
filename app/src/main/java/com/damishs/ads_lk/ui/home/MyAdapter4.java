@@ -1,7 +1,6 @@
 package com.damishs.ads_lk.ui.home;
 
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +15,13 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
+public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
 
     private List<AdItem> listItems;
     private Context context;
     private OnItemListener mOnItemListener;
 
-    public MyAdapter2(List<AdItem> listItems, Context context, OnItemListener onItemListener) {
+    public MyAdapter4(List<AdItem> listItems, Context context, OnItemListener onItemListener) {
         this.listItems = listItems;
         this.context = context;
         this.mOnItemListener = onItemListener;
@@ -30,14 +29,14 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
 
     @NonNull
     @Override
-    public MyAdapter2.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyAdapter4.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.adlistitem,parent,false);
+                .inflate(R.layout.adlistitem4,parent,false);
         return new ViewHolder(v,mOnItemListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter2.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyAdapter4.ViewHolder holder, int position) {
 
         AdItem AdItem = listItems.get(position);
         holder.adName.setText(AdItem.getAdName());
@@ -47,6 +46,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
         holder.price.setText(AdItem.getPrice());
 
         String imageUri = AdItem.getImageUrl();
+
         Picasso.with(context).load(imageUri).into(holder.imageView);
         //.resize(50, 50).
         //Picasso.with(context).load(imageUri).fit().centerCrop().into(holder.imageView);
@@ -65,17 +65,18 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView, OnItemListener onItemListener) {
             super(itemView);
-            imageView= itemView.findViewById(R.id.imageView);
-            publishedDate=itemView.findViewById(R.id.textViewDate);
-            adName=itemView.findViewById(R.id.textViewAdName);
-            sellerName=itemView.findViewById(R.id.textViewSellerName);
-            specialText=itemView.findViewById(R.id.textViewSpecialText);
-            price=itemView.findViewById(R.id.textViewPrice);
+            imageView= itemView.findViewById(R.id.imageView2);
+            publishedDate=itemView.findViewById(R.id.textViewDate2);
+            adName=itemView.findViewById(R.id.textViewAdName2);
+            sellerName=itemView.findViewById(R.id.textViewSellerName2);
+            specialText=itemView.findViewById(R.id.textViewSpecialText2);
+            price=itemView.findViewById(R.id.textViewPrice2);
 
             this.onItemListener = onItemListener;
-
             itemView.setOnClickListener(this);
         }
+
+
         @Override
         public void onClick(View view) {
             onItemListener.onItemClick(getAdapterPosition());
