@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="maintype_categories">
+        <item>Select main category First...</item>
+        <item>Vehicle</item>
+        <item>Property</item>
+        <item>Classified</item>
+        <item>Business And Industry</item>
+        <item>Services</item>
+    </string-array>
+    <string-array name="Default_sub_category">
+        <item>Select sub_category.. </item>
+    </string-array>
+    <string-array name="subtype_categories">
+        <item>Car</item>
+        <item>Motorbikes and Scooters</item>
+        <item>Three wheelers</item>
+        <item>Vans,Buses an Lorries</item>
+        <item>Boats and Watertransport</item>
+        <item>Heavy machinery and tractors</item>
+    </string-array>
+    <string-array name="subtype_categories2">
+        <item>Land</item>
+        <item>Houses</item>
+        <item>Apartments</item>
+        <item>Rooms and annexes</item>
+    </string-array>
+    <string-array name="subtype_categories3">
+        <item>Glosery</item>
+        <item>Electronics</item>
+        <item>Home and Garden</item>
+        <item>Cloths and footwear</item>
+        <item>Health and Beauty</item>
+    </string-array>
+    <string-array name="subtype_categories4">
+        <item>Licences and Titles</item>
+        <item>Power Sources</item>
+        <item>Industry </item>
+        <item>Healthcare</item>
+    </string-array>
+    <string-array name="subtype_categories5">
+        <item>Transport and Logistics</item>
+        <item>Educational services</item>
+        <item>Health services </item>
+        <item>Wedding and Event planning</item>
+    </string-array>
+
+
+
+    <string-array name="categories_Location">
+        <item>Select Location</item>
+        <item>Matara</item>
+        <item>Colombo</item>
+        <item>Galle</item>
+        <item>Hambanthota</item>
+        <item>Kegalle</item>
+        <item>Kaluthara</item>
+        <item>Rathnapura</item>
+
+    </string-array>
+
+    <string-array name="categories_profile">
+        <item>Seller</item>
+        <item>Buyer</item>
+        <item>Seller and buyer</item>
+    </string-array>
+
+    <string-array name="categories_feedback">
+        <item>Select Feedback Type</item>
+        <item>sass</item>
+        <item>sdsds</item>
+    </string-array>
+</resources>
