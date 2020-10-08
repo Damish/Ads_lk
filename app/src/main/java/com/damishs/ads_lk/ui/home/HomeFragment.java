@@ -77,8 +77,6 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
         // 2. set layoutManger
         //recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-
-
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),1, GridLayoutManager.HORIZONTAL, false));
 
         recyclerView2.setLayoutManager(new GridLayoutManager(getActivity(), 2));
