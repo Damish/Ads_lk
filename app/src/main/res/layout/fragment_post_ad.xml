@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="188dp"
+        android:layout_height="155dp"
         android:background="@color/color_bg_blue">
 
 
@@ -31,7 +31,8 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_margin="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
         android:text="Categoty:"
         android:textSize="20sp" />
 
@@ -41,7 +42,8 @@
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:entries="@array/maintype_categories"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:background="@drawable/edit_text_border_1"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -57,13 +59,15 @@
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:entries="@array/Default_sub_category"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:background="@drawable/edit_text_border_1"/>
 
     <Button
         android:id="@+id/select_cat_btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin="50dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
         android:text="Category Selected"
         android:textAllCaps="false" />
 
@@ -71,7 +75,10 @@
         android:id="@+id/reset_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:text="Reset" />
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonk_customize"
+        android:text="Reset"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
