@@ -19,7 +19,6 @@ import com.google.android.material.tabs.TabLayout;
 
 public class DashboardFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
 
     private TabLayout mTabLayout;
     private TabItem home,a1,a2,a3;
@@ -30,17 +29,6 @@ public class DashboardFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-
-
-
 
 
         mTabLayout=root.findViewById(R.id.tablayout);
