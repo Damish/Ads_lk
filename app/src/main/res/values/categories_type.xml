@@ -59,13 +59,13 @@
 
     </string-array>
 
-    <string-array name="categories_profile">
+    <string-array name="profile_type">
         <item>Seller</item>
         <item>Buyer</item>
         <item>Seller and buyer</item>
     </string-array>
 
-    <string-array name="categories_feedback">
+    <string-array name="feedback_type">
         <item>Select Feedback Type</item>
         <item>sass</item>
         <item>sdsds</item>
