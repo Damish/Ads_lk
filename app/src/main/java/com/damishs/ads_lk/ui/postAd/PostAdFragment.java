@@ -25,7 +25,6 @@ import com.damishs.ads_lk.R;
 
 public class PostAdFragment extends Fragment {
 
-    private PostAdViewModel postAdViewModel;
     private Spinner Category_main;
     private Spinner Category_sub;
     private Button select_category,reset;
@@ -33,16 +32,9 @@ public class PostAdFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                             final ViewGroup container, Bundle savedInstanceState) {
-        postAdViewModel =
-                ViewModelProviders.of(this).get(PostAdViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_post_ad, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        postAdViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
 
 
         reset=(Button)root.findViewById(R.id.reset_btn);

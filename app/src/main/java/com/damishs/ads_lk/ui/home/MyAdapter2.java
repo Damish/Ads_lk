@@ -2,13 +2,17 @@ package com.damishs.ads_lk.ui.home;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.damishs.ads_lk.R;
@@ -21,6 +25,10 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
     private List<AdItem> listItems;
     private Context context;
     private OnItemListener mOnItemListener;
+
+    ItemProfileFragment itemProfileFragment = new ItemProfileFragment();
+
+
 
     public MyAdapter2(List<AdItem> listItems, Context context, OnItemListener onItemListener) {
         this.listItems = listItems;
@@ -37,7 +45,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter2.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyAdapter2.ViewHolder holder, final int position) {
 
         AdItem AdItem = listItems.get(position);
         holder.adName.setText(AdItem.getAdName());
@@ -50,6 +58,28 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
         Picasso.with(context).load(imageUri).into(holder.imageView);
         //.resize(50, 50).
         //Picasso.with(context).load(imageUri).fit().centerCrop().into(holder.imageView);
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("POS", position+1);
+                        itemProfileFragment.setArguments(bundle);
+                        Toast.makeText(activity, "position latestItems: "+position+1, Toast.LENGTH_SHORT).show();
+
+                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,itemProfileFragment).addToBackStack(null).commit();
+
+            }
+        });
+
+
+
+
     }
 
     @Override
@@ -79,6 +109,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
         @Override
         public void onClick(View view) {
             onItemListener.onItemClick(getAdapterPosition());
+
         }
     }
 
