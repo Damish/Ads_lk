@@ -1,21 +1,32 @@
 package com.damishs.ads_lk.ui.home;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.damishs.ads_lk.R;
+import com.damishs.ads_lk.ui.postAd.PostAdFragment;
+import com.damishs.ads_lk.ui.postAd.PostUI2;
 import com.squareup.picasso.Picasso;
+
+import com.damishs.ads_lk.ui.home.ItemProfileFragment;
 
 import java.util.List;
 
 public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
+
+    ItemProfileFragment itemProfileFragment = new ItemProfileFragment();
 
     private List<AdItem> listItems;
     private Context context;
@@ -36,7 +47,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter4.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyAdapter4.ViewHolder holder, final int position) {
 
         AdItem AdItem = listItems.get(position);
         holder.adName.setText(AdItem.getAdName());
@@ -50,6 +61,32 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
         Picasso.with(context).load(imageUri).into(holder.imageView);
         //.resize(50, 50).
         //Picasso.with(context).load(imageUri).fit().centerCrop().into(holder.imageView);
+
+
+//        holder.imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                fragmentJump(position);
+//            }
+//        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("POS", position+1);
+                itemProfileFragment.setArguments(bundle);
+                Toast.makeText(activity, "position AllItems: "+position+1, Toast.LENGTH_SHORT).show();
+
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,itemProfileFragment).addToBackStack(null).commit();
+
+            }
+        });
+
     }
 
     @Override
@@ -79,7 +116,10 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
 
         @Override
         public void onClick(View view) {
+
             onItemListener.onItemClick(getAdapterPosition());
+
+
         }
     }
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -30,6 +32,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.widget.Toast;
 import com.damishs.ads_lk.R;
+import com.damishs.ads_lk.ui.postAd.PostUI2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +64,7 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
     public TextView buttonShowMostRecent;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             final ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
@@ -80,7 +83,7 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
 
         recyclerView2.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
-        // this is data fro recycler view
+        // this is data for recycler view
 
         ArrImageUrl.add("https://i.ytimg.com/vi/btAUXonKWJM/maxresdefault.jpg");ArrImageUrl.add("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-audi-q7-mmp-1-1591218923.jpg");ArrImageUrl.add("https://www.carshowroom.com.au/media/21491910/2018-jaguar-e-pace-r-dynamic-p-300-awd-36-0318.jpg");ArrImageUrl.add("https://i.ytimg.com/vi/EvszYleNR4o/maxresdefault.jpg");ArrImageUrl.add("https://www.ukautocenter.com/wp-content/uploads/2019/05/gallery_used-car-one2car-in-process-thailand_2458975_dyzzyJ1O002AWE668gnHjf.jpg");ArrImageUrl.add("https://cnet4.cbsistatic.com/img/fBt45enJ2ezvbEOV5NvMi-JNUDY=/2018/07/12/4c0986b2-1beb-4bf5-9abe-ffee6867b9d4/2018-bmw-x3-ogi.jpg");ArrImageUrl.add("https://i.ytimg.com/vi/aPVirls5qQ4/maxresdefault.jpg");
         ArrPublishedDate.add("07-10-2020");ArrPublishedDate.add("07-10-2020");ArrPublishedDate.add("07-10-2020");ArrPublishedDate.add("07-10-2020");ArrPublishedDate.add("07-10-2020");ArrPublishedDate.add("06-10-2020");ArrPublishedDate.add("06-10-2020");
@@ -162,6 +165,9 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
         });
 
 
+
+
+
         return root;
     }
 
@@ -174,19 +180,19 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
     }
 
 
+
     @Override
     public void onItemClick(int position) {
 
         actv.setCursorVisible(true);
-
         String sendPosition= String.valueOf(position+1);
-
         Log.d(TAG, "onItemClick: Clicked."  + position+1);
 
-        Intent intent = new Intent(getActivity(), ItemProfile2.class);
-        intent.putExtra(POSITION,sendPosition);
-        Toast.makeText(this.getContext(), "Position:"+sendPosition, Toast.LENGTH_LONG).show();
-        startActivity(intent);
+//        Intent intent = new Intent(getActivity(), ItemProfile2.class);
+//        intent.putExtra(POSITION,sendPosition);
+//        Toast.makeText(this.getContext(), "Position:"+sendPosition, Toast.LENGTH_LONG).show();
+//        startActivity(intent);
+
         //getActivity().finish();
     }
 

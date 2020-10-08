@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/color_bg_grey"
     tools:context=".ui."
+    android:id="@+id/fragment_home_layout"
     android:orientation="vertical">
 
     <LinearLayout
@@ -53,7 +54,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="65dp"
                 android:background="@drawable/edit_text_border_1"
-                android:cursorVisible="false"
+                android:cursorVisible="true"
                 android:dropDownWidth="280dp"
                 android:fontFamily="sans-serif"
                 android:hint="       Search Items"
@@ -67,7 +68,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.195">
 
-                <requestFocus></requestFocus>
+<!--                <requestFocus></requestFocus>-->
+
             </AutoCompleteTextView>
 
             <Button

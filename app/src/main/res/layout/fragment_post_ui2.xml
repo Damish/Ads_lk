@@ -8,26 +8,67 @@
     tools:context=".ui.postAd.PostUI2">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:background="@color/color_bg_blue">
 
-
-        <TextView
-            android:id="@+id/text_notifications"
+        <RelativeLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="155dp"
+            android:background="@color/color_bg_blue">
+
+
+            <Button
+                android:id="@+id/btnGoBack4"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="372dp"
+                android:layout_marginBottom="101dp"
+                android:background="@drawable/backbutton2"
+                android:textColor="@color/color_bg_gold"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewBackToHome3"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="291dp"
+                android:layout_marginBottom="104dp"
+                android:text="Back"
+                android:textColor="@color/color_bg_gold"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewCategoriesTitle3"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="252dp"
+                android:layout_marginBottom="57dp"
+                android:text="Post an Ad"
+                android:textColor="@color/color_bg_grey"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewCategoriesTitle4"
+                android:layout_width="221dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="167dp"
+                android:layout_marginBottom="13dp"
+                android:text="(b) Ad Details Form"
+                android:textColor="@color/color_bg_grey"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,77 +77,111 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+
+            android:orientation="vertical"
+            android:background="@color/color_bg_grey">
+
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hello_blank_fragment" />
+                android:layout_height="40dp" />
+
 
             <EditText
                 android:id="@+id/title_in"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+
+                android:background="@drawable/edit_text_border_1"
                 android:ems="10"
                 android:hint="Title Here.."
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:padding="3dp"
+                android:paddingStart="5dp"
+                android:textAlignment="center"
+                android:textSize="15sp" />
 
             <Spinner
                 android:id="@+id/select_loc_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border_1"
+
                 android:entries="@array/categories_Location"
                 android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/price_in"
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+
+                android:background="@drawable/edit_text_border_1"
                 android:ems="10"
                 android:hint="Price.."
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:padding="3dp"
+                android:paddingStart="5dp"
+                android:textAlignment="center"
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/ad_details_in"
                 android:layout_width="match_parent"
                 android:layout_height="139dp"
+
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="15dp"
+
+                android:background="@drawable/edit_text_border_1"
                 android:ems="10"
                 android:hint="Ad Details Here.."
                 android:inputType="textMultiLine"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/add_img_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:text="Add Image"
-                    android:textAllCaps="false" />
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
-                    app:srcCompat="@mipmap/ic_launcher_round" />
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/add_img_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="Add Image"
+                android:textAllCaps="false"
+                tools:layout_marginHorizontal="150dp" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="Contact Details" />
+
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:text="Contact Details"
+                android:textSize="24sp" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,34 +191,58 @@
                 <EditText
                     android:id="@+id/TxtContactName"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+
+                    android:layout_height="40dp"
                     android:layout_margin="10dp"
+
                     android:layout_weight="1"
+                    android:background="@drawable/edit_text_border_1"
                     android:ems="10"
                     android:hint="Name:"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:padding="3dp"
+                    android:paddingStart="9dp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/TxtcontactEmail"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+
+                    android:layout_height="40dp"
                     android:layout_margin="10dp"
+
                     android:layout_weight="1"
+                    android:background="@drawable/edit_text_border_1"
                     android:ems="10"
                     android:hint="Email:"
-                    android:inputType="textPersonName" />
 
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/TxtContactPhone"
-                android:layout_width="187dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Phone:"
-                android:inputType="textPersonName" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/TxtContactPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_border_1"
+                    android:ems="10"
+                    android:hint="Phone:"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/submit_btn"
@@ -151,13 +250,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_marginBottom="50dp"
-                android:text="Submit" />
+                android:text="Submit"
+                android:textColor="@color/color_bg_gold"
+                android:background="@drawable/adapter_border_1"/>
 
-            <Button
-                android:id="@+id/button"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_height="70dp">
+
+            </View>
+
         </LinearLayout>
     </ScrollView>
 

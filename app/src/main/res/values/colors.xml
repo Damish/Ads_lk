@@ -7,5 +7,7 @@
     <color name="color_bg_ash">#B4B4B4</color>
     <color name="color_bg_grey">#f5f5f5</color>
     <color name="color_bg_gold"> #EEC59259</color>
+    <color name="color_bg_darkAsh"> #797979</color>
+
 
 </resources>
