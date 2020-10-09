@@ -347,13 +347,13 @@
             android:textSize="14sp"/>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/moreItemsBySeller"
             android:layout_width="166dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="17dp"
-            android:layout_marginEnd="14dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginBottom="-51dp"
             android:background="@drawable/adapter_border_2"
             android:padding="6dp"

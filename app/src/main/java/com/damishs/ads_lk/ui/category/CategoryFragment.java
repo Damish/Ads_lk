@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -19,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.damishs.ads_lk.R;
 import com.damishs.ads_lk.ui.home.AdItem;
+import com.damishs.ads_lk.ui.home.HomeFragment;
 import com.damishs.ads_lk.ui.home.MyAdapter2;
 
 import java.util.ArrayList;
@@ -33,6 +36,7 @@ public class CategoryFragment extends Fragment implements MyAdapterCategory.OnIt
     public List<String> ArrCategoryName = new ArrayList<>();
     public List<String> ArrNoOfResults = new ArrayList<>();
 
+    Button btnBack4;
     public List<CategoryItem> listItems = new ArrayList<>();
     private  RecyclerView.Adapter categoryAdapter;
 
@@ -40,6 +44,8 @@ public class CategoryFragment extends Fragment implements MyAdapterCategory.OnIt
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_category, container, false);
+
+        btnBack4 = root.findViewById(R.id.btnGoBack4);
 
         // 1. get a reference to recyclerView
         final RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.categoryRecyclerView);
@@ -72,7 +78,18 @@ public class CategoryFragment extends Fragment implements MyAdapterCategory.OnIt
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
+        btnBack4.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View view) {
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                HomeFragment homeFragment = new HomeFragment();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,homeFragment).addToBackStack(null).commit();
+
+
+            }
+        });
 
 
         return root;

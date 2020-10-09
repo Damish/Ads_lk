@@ -22,7 +22,7 @@
 
 
         <Button
-            android:id="@+id/btnGoBack2"
+            android:id="@+id/btnGoBack3"
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:layout_alignParentEnd="true"
@@ -178,5 +178,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="1dp"
         android:background="@color/color_bg_ash" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sellerRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
