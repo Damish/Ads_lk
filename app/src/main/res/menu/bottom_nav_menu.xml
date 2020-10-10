@@ -9,20 +9,20 @@
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/navadvsearch"
         android:title="@string/title_dashboard" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/navaddnew"
         android:title="@string/title_postAd" />
     <item
         android:id="@+id/navigation_categories"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/navcategories"
         android:title="@string/title_categories" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/navprofile"
         android:title="@string/title_profile" />
 
 </menu>

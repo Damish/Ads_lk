@@ -86,7 +86,6 @@ public class HomeFragmentNew extends Fragment implements MyAdapter2.OnItemListen
 
 
 
-
         // 1. get a reference to recyclerView
         final RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
         final RecyclerView recyclerView2 = (RecyclerView) root.findViewById(R.id.recyclerView2);
