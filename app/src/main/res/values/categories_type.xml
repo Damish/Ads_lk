@@ -48,7 +48,7 @@
 
 
     <string-array name="categories_Location">
-        <item>Select Location</item>
+        <item>Select Location...</item>
         <item>Matara</item>
         <item>Colombo</item>
         <item>Galle</item>
@@ -66,8 +66,103 @@
     </string-array>
 
     <string-array name="feedback_type">
-        <item>Select Feedback Type</item>
-        <item>sass</item>
-        <item>sdsds</item>
+        <item>Select Feedback Type...</item>
+        <item>Positive Feedback</item>
+        <item>Bug Report</item>
+        <item>Request</item>
+        <item>Other</item>
     </string-array>
+
+<!--business categories and sub categories-!-->
+
+    <string-array name="business_Cat_Type">
+        <item>select business category...</item>
+        <item>Licences and Titles</item>
+        <item>Power Sources</item>
+        <item>Industry </item>
+
+    </string-array>
+
+    <string-array name="Default_business_sub_category">
+        <item>Select business_sub_category.. </item>
+    </string-array>
+
+    <string-array name="business_sub_cat_Type1">
+        <item>Licences </item>
+        <item>permites</item>
+        <item>Name Titles </item>
+    </string-array>
+
+    <string-array name="business_sub_cat_Type2">
+        <item>Solar energy </item>
+        <item>Generators</item>
+        <item>batteries</item>
+    </string-array>
+
+    <string-array name="business_sub_cat_Type3">
+        <item>Industrial Tools and machinery</item>
+        <item>Row materials and wholesale</item>
+        <item>Workers</item>
+        <item>Others</item>
+    </string-array>
+
+    <!--Classified categories and sub categories-!-->
+
+    <string-array name="classified_main_cat">
+        <item>Select classified main Category...</item>
+        <item>Glosery</item>
+        <item>Electronics</item>
+        <item>Home and Garden</item>
+        <item>Cloths and footwear</item>
+
+    </string-array>
+
+    <string-array name="default_classified_sub">
+        <item>Select classified main Category...</item>
+    </string-array>
+
+
+    <string-array name="classified_sub_type1">
+        <item>Backery Produts</item>
+        <item>Paper Goods</item>
+        <item>Cleaners</item>
+        <item>personal care</item>
+
+    </string-array>
+
+    <string-array name="classified_sub_type2">
+        <item>Laptops</item>
+        <item>Audio systems</item>
+        <item>Electronic gadgets</item>
+        <item>Video Systems</item>
+    </string-array>
+
+    <string-array name="classified_sub_type3">
+        <item>kitchen wear</item>
+        <item>gardening Tools</item>
+        <item>Bathroom fitting</item>
+        <item>Home Decorators</item>
+    </string-array>
+
+    <string-array name="classified_sub_type4">
+        <item>Women Cloths</item>
+        <item>Men  cloths</item>
+        <item>Kids Cloths </item>
+        <item>Shoes</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

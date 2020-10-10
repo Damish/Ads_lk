@@ -9,66 +9,66 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-        <RelativeLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="match_parent"
-            android:layout_height="155dp"
-            android:background="@color/color_bg_blue">
+    <RelativeLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="@color/color_bg_blue">
 
 
-            <Button
-                android:id="@+id/btnGoBack4"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="372dp"
-                android:layout_marginBottom="101dp"
-                android:background="@drawable/backbutton2"
-                android:textColor="@color/color_bg_gold"
-                android:textSize="19sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnGoBack4"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="372dp"
+            android:layout_marginBottom="101dp"
+            android:background="@drawable/backbutton2"
+            android:textColor="@color/color_bg_gold"
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewBackToHome3"
-                android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="291dp"
-                android:layout_marginBottom="104dp"
-                android:text="Back"
-                android:textColor="@color/color_bg_gold"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewCategoriesTitle3"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="110dp"
+            android:layout_marginBottom="57dp"
+            android:text="Post an Ad"
+            android:textColor="@color/color_bg_grey"
+            android:textSize="27sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewCategoriesTitle3"
-                android:layout_width="148dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="252dp"
-                android:layout_marginBottom="57dp"
-                android:text="Post an Ad"
-                android:textColor="@color/color_bg_grey"
-                android:textSize="27sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewCategoriesTitle4"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="167dp"
+            android:layout_marginBottom="13dp"
+            android:text="  Ad Details Form"
+            android:textColor="@color/color_bg_grey"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewCategoriesTitle4"
-                android:layout_width="221dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="167dp"
-                android:layout_marginBottom="13dp"
-                android:text="(b) Ad Details Form"
-                android:textColor="@color/color_bg_grey"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewBackToHome3"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="291dp"
+            android:layout_marginBottom="104dp"
+            android:text="Back"
+            android:textColor="@color/color_bg_gold"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-        </RelativeLayout>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -110,7 +110,7 @@
 
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/edit_text_border_1"
+                android:background="@drawable/spinner_background"
 
                 android:entries="@array/categories_Location"
                 android:textAlignment="center" />
@@ -155,10 +155,10 @@
 
                 <ImageView
                     android:id="@+id/imageView"
+                    android:src="@drawable/camera"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@android:drawable/ic_menu_camera" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <Button
@@ -169,7 +169,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/buttonk_customize"
                 android:text="Add Image"
+                android:textColor="#FFFF"
                 android:textAllCaps="false"
                 tools:layout_marginHorizontal="150dp" />
 
@@ -178,7 +180,7 @@
                 android:layout_width="match_parent"
 
                 android:layout_height="40dp"
-                android:layout_margin="20dp"
+                android:background="@color/color_bg_ash"
                 android:text="Contact Details"
                 android:textSize="24sp" />
 
@@ -248,11 +250,15 @@
                 android:id="@+id/submit_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_marginHorizontal="50dp"
                 android:layout_marginBottom="50dp"
+                android:background="@drawable/adapter_border_1"
+                android:drawableLeft="@drawable/submiticon"
+                android:paddingStart="60dp"
                 android:text="Submit"
                 android:textColor="@color/color_bg_gold"
-                android:background="@drawable/adapter_border_1"/>
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"

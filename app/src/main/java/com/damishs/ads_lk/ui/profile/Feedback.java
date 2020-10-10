@@ -20,7 +20,7 @@ import com.damishs.ads_lk.R;
 
 public class Feedback extends Fragment {
     private View view;
-    private Button send;
+    private Button send,reset;
     private EditText name,email,message;
     private Spinner type;
     @Override
@@ -30,6 +30,7 @@ public class Feedback extends Fragment {
         view = inflater.inflate(R.layout.fragment_feedback, container, false);
 
         send=(Button)view.findViewById(R.id.send_btn);
+       // reset=(Button)view.findViewById(R.id.reset_btn);
         name=(EditText)view.findViewById(R.id.fb_name);
         email=(EditText)view.findViewById(R.id.fb_email);
         message=(EditText)view.findViewById(R.id.fb_message);
@@ -70,6 +71,8 @@ public class Feedback extends Fragment {
                 }
             }
         });
+
+
 
 
         return view;

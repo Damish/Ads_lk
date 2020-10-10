@@ -1,8 +1,12 @@
 package com.damishs.ads_lk.ui.profile;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -12,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.damishs.ads_lk.MainActivity;
 import com.damishs.ads_lk.R;
 
 
@@ -38,7 +43,19 @@ public class editpassword extends Fragment {
                 if (!TextUtils.equals(new_pw_st,repeat_pw_st)){
                     Toast.makeText(getContext(), "repeat_pw not match", Toast.LENGTH_SHORT).show();
                 }else {
+                    AlertDialog.Builder ald=new AlertDialog.Builder(getContext());
+                    ald.setMessage("Post has been Submitted!!!");
+                    ald.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
 
+                            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.nav_host_fragment, new ProfileFragment());
+                            ft.addToBackStack(null);
+                            ft.commit();
+                        }
+                    });
+                    ald.show();
                 }
             }
         });

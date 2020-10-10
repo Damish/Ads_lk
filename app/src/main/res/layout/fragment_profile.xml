@@ -16,12 +16,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/text_profile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
@@ -35,7 +29,9 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Profile"
-                android:textSize="24sp" />
+                android:textColor="@color/color_bg_blue"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <ImageButton
                 android:id="@+id/profile_imgbtn"
@@ -53,7 +49,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
                 android:text="Anne Mare"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/email_prof_txt"
@@ -62,7 +58,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
                 android:text="annemare@gmail.com"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/phone_prof_txt"
@@ -71,7 +67,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
                 android:text="0712345678"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/type_prof_txt"
@@ -80,7 +76,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
                 android:text="sass"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/town_prof_txt"
@@ -89,7 +85,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
                 android:text="Kaluthara"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:id="@+id/edit_pass_btn"
@@ -103,7 +99,11 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="Edit Password" />
+                    android:background="@drawable/buttonk_customize"
+                    android:drawableLeft="@drawable/pwdicon"
+                    android:text="Edit Password"
+                    android:textColor="#FFFF"
+                    android:textSize="12sp" />
 
                 <Button
                     android:id="@+id/edit_prof_btn"
@@ -111,15 +111,25 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="Edit Profile" />
+                    android:background="@drawable/buttonk_customize"
+                    android:drawableLeft="@drawable/editpro"
+                    android:text="Edit Profile"
+                    android:textColor="#FFFF"
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/feedback_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Feedback" />
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/buttonk_customize"
+                android:drawableLeft="@drawable/feedbackk"
+                android:paddingHorizontal="70dp"
+                android:paddingStart="70dp"
+                android:text="Feedback"
+                android:textColor="#FFFF"
+                android:textSize="12sp" />
         </LinearLayout>
     </ScrollView>
 
