@@ -38,7 +38,7 @@ public class DashboardFragment extends Fragment {
         a3=root.findViewById(R.id.home3);
         mPager = root.findViewById(R.id.viewpager);
 
-        pageController = new PageController(getActivity().getSupportFragmentManager(),mTabLayout.getTabCount());
+        pageController = new PageController(this.getChildFragmentManager(),mTabLayout.getTabCount());
         mPager.setAdapter(pageController);
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
