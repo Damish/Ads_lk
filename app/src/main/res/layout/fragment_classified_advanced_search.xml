@@ -1,14 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.ClassifiedAdvancedSearch">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:background="@color/color_bg_grey">
 
-</FrameLayout>
+        <Spinner
+            android:id="@+id/spinner_class_main"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/spinner_background"
+            android:entries="@array/classified_main_cat" />
+
+        <Spinner
+            android:id="@+id/spinner_cla_sub"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/spinner_background"
+            android:entries="@array/default_classified_sub" />
+
+        <Spinner
+            android:id="@+id/spinner_cla_loc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/spinner_background"
+            android:entries="@array/categories_Location" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Price From:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_cla_price_from"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:background="@drawable/edit_text_border_1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="159dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Price To   :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_cla_price_to"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_border_1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_cla_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="45dp"
+            android:background="@drawable/adapter_border_1"
+            android:drawableLeft="@drawable/serchicon50"
+            android:paddingHorizontal="20dp"
+            android:text="Advanced Search" />
+    </LinearLayout>
+</LinearLayout>

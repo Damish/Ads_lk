@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--vehicles categories and sub categories-!-->
+
+    <string-array name="Vehicle_type">
+        <item>Vehicle type </item>
+        <item>Cars</item>
+        <item>Bikes</item>
+        <item>Vans</item>
+        <item>Jeeps</item>
+    </string-array>
+
+    <!-- xxxxxxx brand xxxxx-->
+    <string-array name="Default_vehicle_brand">
+        <item>Brand</item>
+    </string-array>
+
+    <string-array name="Car_brands">
+        <item>Toyota</item>
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Nissan</item>
+        <item>Civic</item>
+        <item>Fiat</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="Bike_brands">
+        <item>Ducati</item>
+        <item>BMW</item>
+        <item>Honda</item>
+        <item>Yamaha</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="Van_brands">
+        <item>Hiace</item>
+        <item>Town Ace</item>
+        <item>Lite Ace</item>
+        <item>KDH</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="Jeep_brands">
+        <item>Prado</item>
+        <item>Montero</item>
+        <item>Defender</item>
+        <item>Jeep Wrangler</item>
+        <item>Nissan Patrol</item>
+        <item>Other</item>
+    </string-array>
+
+
+<!-- xxxxxxx condition xxxxx-->
+    <string-array name="condition">
+        <item>Condition</item>
+        <item>Used</item>
+        <item>Brandnew</item>
+        <item>Re-condition</item>
+    </string-array>
+
+    <!-- xxxxxxx mileage xxxxx-->
+    <string-array name="mileage">
+        <item>Mileage</item>
+        <item>less than 12,000</item>
+        <item>higher than 12,00</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <!-- xxxxxxx built year xxxxx-->
+    <string-array name="built_year">
+        <item>Built Year</item>
+        <item>1990-2000</item>
+        <item>2000-2010</item>
+        <item>2010-2020</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- xxxxxxx location xxxxx-->
+    <string-array name="location">
+        <item>Location</item>
+        <item>Western Province</item>
+        <item>Central Province</item>
+        <item>Southern Province</item>
+        <item>Uva Province</item>
+        <item>Sabaragamuwa Province</item>
+        <item>North Western Province</item>
+        <item>North Central Province</item>
+        <item>Nothern Province</item>
+    </string-array>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxx  -->
+
+
+    <string-array name="Properties">
+        <item>Select Category</item>
+        <item>Houses</item>
+        <item>Lands</item>
+        <item>Buildings</item>
+        <item>Apartments</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="prop_location">
+        <item>Location</item>
+        <item>Western Province</item>
+        <item>Central Province</item>
+        <item>Southern Province</item>
+        <item>Uva Province</item>
+        <item>Sabaragamuwa Province</item>
+        <item>North Western Province</item>
+        <item>North Central Province</item>
+        <item>Nothern Province</item>
+    </string-array>
+  </resources>
