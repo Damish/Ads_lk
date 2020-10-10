@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/edit_text_border_1"
+    >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <TextView
+           android:id="@+id/textViewDate"
+           android:layout_width="80dp"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentEnd="true"
+           android:layout_marginTop="5dp"
+           android:layout_marginEnd="25dp"
+           android:gravity="center"
+           android:text="Date"
+           android:textSize="8sp" />
+   </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="113dp"
+        android:layout_height="85dp"
+        android:layout_margin="4dp" />
+<!--        app:srcCompat="@drawable/qrimage"-->
+
+
+    <RelativeLayout
+        android:id="@+id/dxgdx"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <TextView
+            android:id="@+id/textViewAdName"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="6dp"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textSize="10sp"
+            tools:text="Ad Name" />
+
+        <TextView
+            android:id="@+id/textViewSellerName"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="6dp"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textSize="10sp"
+            tools:text="Seller name" />
+
+        <TextView
+            android:id="@+id/textViewSpecialText"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="437dp"
+            android:text="Special Text"
+            android:textAlignment="center"
+            android:textColor="#8D8D8D"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="73dp"
+            android:text="Price"
+            android:textAlignment="center"
+            android:textColor="#880E4F"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

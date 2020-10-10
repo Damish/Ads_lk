@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/adapter_border_3"
+    tools:ignore="MissingDefaultResource">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="105dp"
+            android:layout_height="94dp"
+            android:layout_margin="7dp" />
+
+<!--        app:srcCompat="@drawable/qrimage"-->
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dxgdx"
+        android:layout_width="match_parent"
+        android:layout_height="104dp">
+
+        <TextView
+            android:id="@+id/textViewDate2"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="90dp"
+            android:layout_marginBottom="88dp"
+            android:gravity="center"
+            android:text="Date"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textViewPrice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="3dp"
+            android:text="Price"
+            android:textAlignment="viewStart"
+            android:textColor="#1B5E20"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewSellerName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="0dp"
+            android:textAlignment="viewStart"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            tools:text="Seller name" />
+
+        <TextView
+            android:id="@+id/textViewAdName2"
+            android:layout_width="263dp"
+            android:layout_height="21dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="66dp"
+            android:textAlignment="viewStart"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            tools:text="Ad Name" />
+
+        <TextView
+            android:id="@+id/textViewSpecialText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="0dp"
+            android:text="Special Text"
+            android:textAlignment="viewStart"
+            android:textColor="#8D8D8D"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

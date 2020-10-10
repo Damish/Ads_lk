@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_bg_grey"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ItemProfile2">
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="@color/color_bg_blue"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <Button
+            android:id="@+id/btnGoBack3"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="372dp"
+            android:layout_marginBottom="101dp"
+            android:background="@drawable/backbutton2"
+            android:textColor="@color/color_bg_gold"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewId2"
+            android:layout_width="74dp"
+            android:layout_height="29dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="191dp"
+            android:layout_marginBottom="113dp"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/SellerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="136dp"
+            android:layout_marginBottom="60dp"
+            android:text="Daniel Hardrock"
+            android:textColor="@color/color_bg_grey"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/button9"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/btn_message"
+            android:padding="3dp"
+            android:text="Message"
+            android:textAlignment="center"
+            android:textColor="@color/color_bg_grey"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/SellerLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="137dp"
+            android:layout_marginBottom="38dp"
+            android:text="Colombo,Sri lanka"
+            android:textColor="@color/color_bg_ash"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="194dp"
+            android:layout_marginBottom="16dp"
+            android:numStars="5"
+            android:progressTint="@color/color_bg_gold"
+            android:rating="4"
+            android:secondaryProgressTint="@color/color_bg_grey" />
+
+        <TextView
+            android:id="@+id/textViewBackToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="262dp"
+            android:layout_marginBottom="106dp"
+            android:text="Ad Details"
+            android:textColor="@color/color_bg_gold"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/callButton"
+            android:layout_width="78dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="295dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/btn_call"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Call"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/color_bg_grey"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="69dp"
+            android:layout_height="59dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="36dp"
+            android:src="@drawable/sellermale">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/SellerName2"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="4dp"
+            android:text="Daniel Hardrock"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_bg_blue"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="303dp"
+            android:layout_marginBottom="4dp"
+            android:text="Other Ads by"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="390dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_bg_ash" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sellerRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

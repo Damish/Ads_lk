@@ -96,17 +96,17 @@
             android:secondaryProgressTint="@color/color_bg_grey" />
 
         <TextView
-            android:id="@+id/textViewBackToHome"
-            android:layout_width="74dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="291dp"
-            android:layout_marginBottom="104dp"
-            android:text="Home"
-            android:textColor="@color/color_bg_gold"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+        android:id="@+id/textViewBackToHome"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="291dp"
+        android:layout_marginBottom="104dp"
+        android:text="Home"
+        android:textColor="@color/color_bg_gold"
+        android:textSize="22sp"
+        android:textStyle="bold" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -148,68 +148,88 @@
             android:layout_marginEnd="50dp">
 
         </ImageView>
+
     </RelativeLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="390dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/color_bg_ash" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="5dp">
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtPrice"
-            android:layout_width="wrap_content"
+            android:id="@+id/adName2"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Rs.EEEEE"
-            android:textSize="16sp"
-            android:paddingTop="6dp"
-            android:paddingLeft="19dp"
-            android:paddingRight="19dp"
-            android:paddingBottom= "6dp"
-            android:background="@drawable/adapter_border_1"
-            android:textColor="@color/color_bg_gold">
+            android:layout_marginStart="20sp"
+            android:text="Mercedez Benz S200"
+            android:layout_weight="1"
+            android:textColor="#4B4B4B"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
-        </TextView>
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="19dp"
+        android:paddingTop="6dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="6dp"
+        android:text="Rs.EEEEE"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="(*negotiable)" />
+</LinearLayout>
     </LinearLayout>
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="370dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="2dp"
-        android:background="@color/color_bg_gold" />
+<!--    <View-->
+<!--        android:id="@+id/divider2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:layout_marginBottom="2dp"-->
+<!--        android:background="@color/color_bg_gold" />-->
 
     <RelativeLayout
+        android:id="@+id/sellerDetails"
         android:layout_width="match_parent"
-        android:layout_height="82dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp">
+        android:layout_height="73dp"
+        android:layout_gravity="start"
+        android:background="@color/color_bg_grey">
 
         <ImageView
-            android:layout_width="69dp"
-            android:layout_height="59dp"
+            android:layout_width="71dp"
+            android:layout_height="53dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="11dp"
-            android:layout_marginBottom="12dp"
-            android:src="@drawable/profilemale">
+            android:layout_marginBottom="11dp"
+            android:src="@drawable/sellermale">
 
         </ImageView>
-
-        <TextView
-            android:id="@+id/button9"
-            android:layout_width="102dp"
-            android:layout_height="24dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="13dp"
-            android:background="@drawable/btn_message"
-            android:text="Message"
-            android:textAlignment="center"
-            android:textColor="@color/color_bg_grey"
-            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/callButton"
@@ -217,11 +237,27 @@
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="47dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="43dp"
             android:background="@drawable/btn_call"
-            android:text="Call"
             android:foreground="?android:attr/selectableItemBackground"
+            android:padding="3dp"
+            android:text="Call"
+            android:textAlignment="center"
+            android:textColor="@color/color_bg_grey"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/button9"
+            android:layout_width="102dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/btn_message"
+            android:padding="3dp"
+            android:text="Message"
             android:textAlignment="center"
             android:textColor="@color/color_bg_grey"
             android:textSize="13sp" />
@@ -232,10 +268,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="99dp"
-            android:layout_marginBottom="51dp"
+            android:layout_marginStart="93dp"
+            android:layout_marginBottom="45dp"
             android:text="Saman Perera"
-            android:textColor="#383838"
+            android:textColor="#4B4A4A"
             android:textSize="17sp">
 
         </TextView>
@@ -246,41 +282,45 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="101dp"
-            android:layout_marginTop="37dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
             android:text="Colombo,Sri Lanka"
+            android:textColor="#7C7A7A"
             android:textSize="10sp">
+
         </TextView>
 
-        <TextView
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="14dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="101dp"
-            android:layout_marginTop="55dp"
-            android:layout_marginBottom="14dp"
-            android:text="+94712303299"
-            android:textSize="10sp">
-
-        </TextView>
+            android:layout_marginEnd="238dp"
+            android:layout_marginBottom="8dp"
+            android:numStars="5"
+            android:progressTint="@color/color_bg_gold"
+            android:rating="4"
+            android:secondaryProgressTint="@color/color_bg_grey" />
 
     </RelativeLayout>
 
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="370dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="2dp"
-        android:background="@color/color_bg_gold"
-       />
+<!--    <View-->
+<!--        android:id="@+id/divider3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:background="@color/color_bg_gold"-->
+<!--       />-->
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="254dp"
-        android:layout_marginTop="5dp">
+        android:background="@color/color_bg_grey"
+        android:layout_marginTop="2dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -306,6 +346,29 @@
             android:textColor="#383838"
             android:textSize="14sp"/>
 
-
+        <TextView
+            android:id="@+id/moreItemsBySeller"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="-51dp"
+            android:background="@drawable/adapter_border_2"
+            android:padding="6dp"
+            android:text="More items by seller"
+            android:textAlignment="center"
+            android:textSize="13sp" />
     </RelativeLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="390dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/color_bg_ash" />
+
 </LinearLayout>

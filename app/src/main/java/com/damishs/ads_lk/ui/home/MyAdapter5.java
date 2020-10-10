@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
+public class MyAdapter5 extends RecyclerView.Adapter<MyAdapter5.ViewHolder> {
 
     ItemProfileFragment itemProfileFragment = new ItemProfileFragment();
 
@@ -26,7 +26,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
     private Context context;
     private OnItemListener mOnItemListener;
 
-    public MyAdapter4(List<AdItem> listItems, Context context, OnItemListener onItemListener) {
+    public MyAdapter5(List<AdItem> listItems, Context context, OnItemListener onItemListener) {
         this.listItems = listItems;
         this.context = context;
         this.mOnItemListener = onItemListener;
@@ -34,14 +34,14 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
 
     @NonNull
     @Override
-    public MyAdapter4.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyAdapter5.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.adlistitem4_grid_view_v2,parent,false);
+                .inflate(R.layout.adlistitem4_list_view,parent,false);
         return new ViewHolder(v,mOnItemListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter4.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull MyAdapter5.ViewHolder holder, final int position) {
 
         AdItem AdItem = listItems.get(position);
         holder.adName.setText(AdItem.getAdName());
@@ -69,6 +69,8 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
             public void onClick(View v) {
 
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+
                 Bundle bundle = new Bundle();
                 bundle.putInt("POS", position+1);
                 itemProfileFragment.setArguments(bundle);
