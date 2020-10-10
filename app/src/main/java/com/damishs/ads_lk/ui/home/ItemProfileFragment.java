@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.damishs.ads_lk.R;
+import com.damishs.ads_lk.ui.homeNew.HomeTabsFragment;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -133,8 +134,8 @@ public class ItemProfileFragment extends Fragment{
             public void onClick(View view) {
 
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                HomeFragment homeFragment = new HomeFragment();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,homeFragment).addToBackStack(null).commit();
+                HomeTabsFragment homeTabsFragment = new HomeTabsFragment();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,homeTabsFragment).addToBackStack(null).commit();
 
 
             }

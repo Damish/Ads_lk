@@ -130,7 +130,6 @@ public class SellerProfileFragment extends Fragment implements View.OnClickListe
                 itemProfileFragment.setArguments(bundle);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,itemProfileFragment).addToBackStack(null).commit();
 
-
             }
         });
 
