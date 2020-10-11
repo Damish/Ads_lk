@@ -23,6 +23,7 @@ import com.damishs.ads_lk.R;
 import com.damishs.ads_lk.ui.home.AdItem;
 import com.damishs.ads_lk.ui.home.HomeFragment;
 import com.damishs.ads_lk.ui.home.MyAdapter2;
+import com.damishs.ads_lk.ui.homeNew.HomeTabsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +85,7 @@ public class CategoryFragment extends Fragment implements MyAdapterCategory.OnIt
             public void onClick(View view) {
 
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                HomeFragment homeFragment = new HomeFragment();
+                HomeTabsFragment homeFragment = new HomeTabsFragment();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,homeFragment).addToBackStack(null).commit();
 
 

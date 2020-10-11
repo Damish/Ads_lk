@@ -108,7 +108,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/buttonk_customize"
-        android:drawableLeft="@drawable/bracketategory"
+        android:drawableLeft="@drawable/catkisal"
         android:paddingStart="40dp"
         android:text="Category Selected"
         android:textAllCaps="false"
@@ -121,7 +121,7 @@
         android:layout_marginHorizontal="100dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/buttonk_customize"
-        android:drawableLeft="@drawable/reseticon"
+        android:drawableLeft="@drawable/resetkisal"
         android:paddingStart="40dp"
         android:text="Reset"
         android:textColor="#FFFFFF" />
