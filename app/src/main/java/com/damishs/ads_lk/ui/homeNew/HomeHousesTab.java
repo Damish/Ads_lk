@@ -75,6 +75,8 @@ public class HomeHousesTab extends Fragment implements MyAdapter2.OnItemListener
         recyclerView2.setItemAnimator(new DefaultItemAnimator());
 
 
+
+
         return root;
     }
 

@@ -1,11 +1,14 @@
 package com.damishs.ads_lk.ui.homeNew;
 
+import android.graphics.Color;
 import android.graphics.pdf.PdfRenderer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -63,6 +66,8 @@ public class HomeTabsFragment extends Fragment implements View.OnClickListener,M
     private  RecyclerView.Adapter adapter5;
 
     public TextView buttonShowMostRecent;
+
+    public AutoCompleteTextView actv;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -155,6 +160,15 @@ public class HomeTabsFragment extends Fragment implements View.OnClickListener,M
             listItems.add(adlistItem);
         }
 
+        ///////////Auto complete text view//////////////////
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getContext(), android.R.layout.select_dialog_item, ArrAdName);
+        actv = root.findViewById(R.id.autoCompleteTextView);
+        actv.setThreshold(1);
+        actv.setAdapter(adapter);
+        actv.setTextColor(Color.BLUE);
+        actv.setCompletionHint("Search results ");
+        actv.setOnItemClickListener(this);
+        /////////////////////////////
 
 
 
@@ -191,7 +205,31 @@ public class HomeTabsFragment extends Fragment implements View.OnClickListener,M
             }
         });
 
+        mPager.setOnPageChangeListener (new ViewPager.OnPageChangeListener() {
+           float pos;
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+                if(position+positionOffset>pos){
+                    recyclerView.setVisibility(View.GONE);
+                }
+
+                pos =position+positionOffset;
+
+                if(recyclerView.getVisibility() == View.VISIBLE)
+                {
+                    buttonShowMostRecent.setText("Hide");
+                }else{
+                    buttonShowMostRecent.setText("Show");
+                }
+            }
+            @Override
+            public void onPageSelected(int position) {
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
 
 
         return root;

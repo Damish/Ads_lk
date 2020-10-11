@@ -11,37 +11,24 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="312dp"
+        android:layout_marginTop="24dp"
         android:text="Properties"
-        android:textColor="#F37A29"
-        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="#424242"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="28dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/ic_prop_search"
-        app:layout_constraintEnd_toStartOf="@+id/txtSrc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
-
     <EditText
         android:id="@+id/txtSrc"
         android:layout_width="229dp"
         android:layout_height="38dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="56dp"
         android:background="@drawable/custom_textview"
         android:ems="10"
@@ -50,6 +37,19 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_prop_search"
+        app:layout_constraintEnd_toStartOf="@+id/txtSrc"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <TextView
         android:id="@+id/textView"
@@ -157,7 +157,7 @@
         android:layout_width="41dp"
         android:layout_height="44dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="30dp"
         android:src="@drawable/ic_prop_location"
         app:layout_constraintEnd_toStartOf="@+id/spinner_location"

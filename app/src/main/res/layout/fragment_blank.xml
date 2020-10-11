@@ -11,20 +11,46 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="248dp"
+        android:layout_marginTop="24dp"
         android:text="Cars and Vehicles"
-        android:textColor="#F37A29"
-        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="#424242"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Spinner
+        android:id="@+id/spinner_vt"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/spinner_background"
+        android:ems="10"
+        android:entries="@array/Vehicle_type"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="34dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_prop_car"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_vt"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <TextView
         android:id="@+id/textView8"
@@ -115,19 +141,6 @@
         app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="34dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/ic_prop_car"
-        app:layout_constraintEnd_toStartOf="@+id/spinner_vt"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -221,21 +234,6 @@
         android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFrom" />
-
-    <Spinner
-        android:id="@+id/spinner_vt"
-        android:layout_width="229dp"
-        android:layout_height="38dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="56dp"
-        android:background="@drawable/spinner_background"
-        android:ems="10"
-        android:entries="@array/Vehicle_type"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinner_brand"

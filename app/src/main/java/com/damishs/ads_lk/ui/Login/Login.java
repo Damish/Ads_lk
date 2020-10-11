@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.damishs.ads_lk.MainActivity;
 import com.damishs.ads_lk.R;
+import com.damishs.ads_lk.ui.homeNew.HomeTabsFragment;
 
 public class Login extends AppCompatActivity {
     private EditText  s_email, s_password;
@@ -54,6 +56,11 @@ public class Login extends AppCompatActivity {
         }
         else {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_LONG).show();
+
+            Intent intToHome = new Intent(Login.this, MainActivity.class);
+            startActivity(intToHome);
+            finish();
+
         }
     }
 
