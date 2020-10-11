@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -62,7 +63,17 @@ public class Feedback extends Fragment {
                                 adb.setMessage("Feedback send success");
                                 adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
-                                    public void onClick(DialogInterface dialog, int which) { }
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                        ProfileFragment fragment1 = new ProfileFragment();
+
+                                        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+
+
+                                        ft.replace(R.id.nav_host_fragment, fragment1);
+                                        ft.addToBackStack(null);
+                                        ft.commit();
+                                    }
                                 });
                                 adb.show();
                             }

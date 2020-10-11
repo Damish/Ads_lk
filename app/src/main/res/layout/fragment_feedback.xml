@@ -125,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/buttonk_customize"
-            android:drawableLeft="@drawable/reseticon"
+            android:drawableLeft="@drawable/resetkisal"
             android:paddingHorizontal="20dp"
             android:text="Reset"
             android:textColor="#ffff"/>
@@ -137,7 +137,7 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:background="@drawable/buttonk_customize"
-            android:drawableLeft="@drawable/sendicon"
+            android:drawableLeft="@drawable/ic_login_send"
             android:paddingHorizontal="20dp"
             android:text="Send"
             android:textColor="#ffff" />
