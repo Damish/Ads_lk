@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 
 import androidx.core.content.ContextCompat;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
+
 
 
 

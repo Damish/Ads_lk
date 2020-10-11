@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.damishs.ads_lk.ui.home.HomeFragment"
+        android:name="com.damishs.ads_lk.ui.homeNew.HomeTabsFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home_tab_view" />
 
 
     <fragment

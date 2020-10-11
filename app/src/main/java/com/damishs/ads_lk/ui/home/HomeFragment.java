@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -37,7 +38,7 @@ import com.damishs.ads_lk.ui.postAd.PostUI2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,MyAdapter4.OnItemListener, AdapterView.OnItemClickListener{
+public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,MyAdapter4.OnItemListener, MyAdapter5.OnItemListener, AdapterView.OnItemClickListener{
 
     public static final String POSITION ="1";
     private static final String TAG = "SomeActivity";
@@ -57,9 +58,12 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
     public List<AdItem> listItems = new ArrayList<>();
     private  RecyclerView.Adapter adapter2;
     private  RecyclerView.Adapter adapter4;
+    private  RecyclerView.Adapter adapter5;
     public AutoCompleteTextView actv;
 
     public TextView SelectedACTV;
+
+    public static String selectedLayout = "Grid";
 
     public TextView buttonShowMostRecent;
 
@@ -70,18 +74,6 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
 
         buttonShowMostRecent = root.findViewById(R.id.buttonShowMostRecent);
 
-        // 1. get a reference to recyclerView
-        final RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
-        final RecyclerView recyclerView2 = (RecyclerView) root.findViewById(R.id.recyclerView2);
-
-        // 2. set layoutManger
-        //recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
-
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),1, GridLayoutManager.HORIZONTAL, false));
-
-        recyclerView2.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
         // this is data for recycler view
 
@@ -106,7 +98,6 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
         actv.setCompletionHint("Search results ");
         actv.setOnItemClickListener(this);
 
-
         /////////////////////////////
 
 
@@ -116,18 +107,32 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
         }
 
 
-        // 3. create an adapter
+        // 1. get a reference to recyclerView
+        final RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
+        final RecyclerView recyclerView2 = (RecyclerView) root.findViewById(R.id.recyclerView2);
+
+        // 2. set layoutManger
+        //Most recent ads-all functions related to recycler view
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),1, GridLayoutManager.HORIZONTAL, false));
         adapter2 = new MyAdapter2(listItems,this.getContext(), this);
-        adapter4 = new MyAdapter4(listItems,this.getContext(), this);
-
-
-        // 4. set adapter
         recyclerView.setAdapter(adapter2);
-        recyclerView2.setAdapter(adapter4);
-
-        // 5. set item animator to DefaultAnimator
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView2.setItemAnimator(new DefaultItemAnimator());
+
+
+        //All ads - two options seperating condition ( Grid / List )
+        if(selectedLayout.equals("Grid")){
+            recyclerView2.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+            adapter4 = new MyAdapter4(listItems,this.getContext(), this);
+            recyclerView2.setAdapter(adapter4);
+            recyclerView2.setItemAnimator(new DefaultItemAnimator());
+        }
+        else if (selectedLayout.equals("List")){
+            recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
+            adapter5 = new MyAdapter5(listItems,this.getContext(), this);
+            recyclerView2.setAdapter(adapter5);
+            recyclerView2.setItemAnimator(new DefaultItemAnimator());
+        }
+
 
 
 
@@ -136,7 +141,6 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
             public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
                 if (scrollY>oldScrollY){
                     recyclerView.setVisibility(View.GONE);
-
                 }else if (scrollY<oldScrollY){
                    // recyclerView.setVisibility(View.VISIBLE);
                 }
@@ -161,11 +165,12 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
                     buttonShowMostRecent.setText("Hide");
                     recyclerView.setVisibility(View.VISIBLE);
                 }
+
+//                HomeFragment homeFragment1 =  new HomeFragment();
+//                homeFragment1.selectedLayout="List";
+
             }
         });
-
-
-
 
 
         return root;
@@ -180,20 +185,12 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
     }
 
 
-
     @Override
     public void onItemClick(int position) {
-
         actv.setCursorVisible(true);
         String sendPosition= String.valueOf(position+1);
         Log.d(TAG, "onItemClick: Clicked."  + position+1);
 
-//        Intent intent = new Intent(getActivity(), ItemProfile2.class);
-//        intent.putExtra(POSITION,sendPosition);
-//        Toast.makeText(this.getContext(), "Position:"+sendPosition, Toast.LENGTH_LONG).show();
-//        startActivity(intent);
-
-        //getActivity().finish();
     }
 
 
@@ -201,7 +198,6 @@ public class HomeFragment extends Fragment implements MyAdapter2.OnItemListener,
     public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
         // fetch the user selected value
         String item = parent.getItemAtPosition(position).toString();
-
         Toast.makeText(this.getActivity(), "Selected Item is: \t" + item, Toast.LENGTH_LONG).show();
     }
 }

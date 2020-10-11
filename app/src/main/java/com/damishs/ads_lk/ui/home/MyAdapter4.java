@@ -11,16 +11,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.damishs.ads_lk.R;
-import com.damishs.ads_lk.ui.postAd.PostAdFragment;
-import com.damishs.ads_lk.ui.postAd.PostUI2;
 import com.squareup.picasso.Picasso;
-
-import com.damishs.ads_lk.ui.home.ItemProfileFragment;
 
 import java.util.List;
 
@@ -42,7 +36,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
     @Override
     public MyAdapter4.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.adlistitem4,parent,false);
+                .inflate(R.layout.adlistitem4_grid_view_v2,parent,false);
         return new ViewHolder(v,mOnItemListener);
     }
 
@@ -75,8 +69,6 @@ public class MyAdapter4 extends RecyclerView.Adapter<MyAdapter4.ViewHolder> {
             public void onClick(View v) {
 
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-
-
                 Bundle bundle = new Bundle();
                 bundle.putInt("POS", position+1);
                 itemProfileFragment.setArguments(bundle);

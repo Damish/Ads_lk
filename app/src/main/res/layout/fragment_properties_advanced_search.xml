@@ -1,14 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_bg_grey"
     tools:context=".ui.dashboard.PropertiesAdvancedSearch">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:text="Properties"
+        android:textAlignment="center"
+        android:textColor="#424242"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/txtSrc"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/custom_textview"
+        android:ems="10"
+        android:hint="Search by Keyword"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_prop_search"
+        app:layout_constraintEnd_toStartOf="@+id/txtSrc"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="49dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="160dp"
+        android:text="Or"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSrc" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_prop_category"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_vt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Spinner
+        android:id="@+id/spinner_vt"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/spinner_background"
+        android:ems="10"
+        android:entries="@array/Properties"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_prop_srch_prop"
+        app:layout_constraintEnd_toStartOf="@+id/textViewProp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textViewProp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="160dp"
+        android:text="Property for ? "
+        android:textColor="#BE000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_vt" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="105dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProp">
+
+        <RadioButton
+            android:id="@+id/rSale"
+            android:layout_width="79dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Sale"
+            android:textColor="#000000"
+            tools:layout_editor_absoluteX="251dp"
+            tools:layout_editor_absoluteY="577dp" />
+
+        <RadioButton
+            android:id="@+id/rRent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="11dp"
+            android:text="Rent "
+            android:textColor="#000000"
+            tools:layout_editor_absoluteY="577dp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="41dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_prop_location"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <Spinner
+        android:id="@+id/spinner_location"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/spinner_background"
+        android:ems="10"
+        android:entries="@array/prop_location"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="40dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/ic_prop_dollar"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="178dp"
+        android:text="Price Range"
+        android:textColor="#BE000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_location" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="11dp"
+        android:text="From :"
+        android:textColor="#BE000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtFrom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:text="To :"
+        android:textColor="#BE000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/txtFrom"
+        android:layout_width="93dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="61dp"
+        android:background="@drawable/custom_textview"
+        android:ems="10"
+        android:hint="Rs."
+        android:inputType="number"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_location" />
+
+    <EditText
+        android:id="@+id/txtTo"
+        android:layout_width="93dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="61dp"
+        android:background="@drawable/custom_textview"
+        android:ems="10"
+        android:hint="Rs."
+        android:inputType="number"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFrom" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="104dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="74dp"
+        android:background="@drawable/custom_btn_reset_d2"
+        android:drawableStart="@drawable/ic_reset"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Reset"
+        android:textColor="#004080"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnSrc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/btnSrc"
+        android:layout_width="117dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/coustom_btn_d1"
+        android:drawableStart="@drawable/ic_search_d"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Search"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

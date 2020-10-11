@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="252dp"
+            android:layout_marginEnd="110dp"
             android:layout_marginBottom="57dp"
             android:text="Post an Ad"
             android:textColor="@color/color_bg_grey"
@@ -60,7 +60,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="167dp"
             android:layout_marginBottom="13dp"
-            android:text="(a) Select Category"
+            android:text=" Category Selection"
             android:textColor="@color/color_bg_grey"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -80,9 +80,9 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
+        android:background="@drawable/spinner_background"
         android:entries="@array/maintype_categories"
-        android:textAlignment="center"
-        android:background="@drawable/edit_text_border_1"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/textView2"
@@ -97,9 +97,9 @@
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
+        android:background="@drawable/spinner_background"
         android:entries="@array/Default_sub_category"
-        android:textAlignment="center"
-        android:background="@drawable/edit_text_border_1"/>
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/select_cat_btn"
@@ -107,16 +107,22 @@
         android:layout_height="50dp"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/buttonk_customize"
+        android:drawableLeft="@drawable/bracketategory"
+        android:paddingStart="40dp"
         android:text="Category Selected"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/reset_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
+        android:layout_marginHorizontal="100dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/buttonk_customize"
+        android:drawableLeft="@drawable/reseticon"
+        android:paddingStart="40dp"
         android:text="Reset"
         android:textColor="#FFFFFF" />
 

@@ -7,61 +7,96 @@
 
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="135dp"
-        android:background="@color/color_bg_darkAsh">
+        android:layout_height="105dp"
+        android:background="@color/color_bg_blue">
 
+
+        <Button
+            android:id="@+id/btnGoBack4"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="372dp"
+            android:layout_marginBottom="51dp"
+            android:background="@drawable/backbutton2"
+            android:textColor="@color/color_bg_gold"
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/text_dashboard"
+            android:id="@+id/textViewBackToHome3"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="291dp"
+            android:layout_marginBottom="54dp"
+            android:text="Home"
+            android:textColor="@color/color_bg_gold"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCategoriesTitle3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="2dp"
+            android:paddingStart="10dp"
+            android:text="Advanced Search"
+            android:textAlignment="viewStart"
+            android:textColor="@color/color_bg_grey"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         app:tabBackground="@color/color_bg_blue"
-        app:tabIndicatorColor="@color/color_bg_gold"
+        app:tabIndicatorColor="@color/color_bg_ash"
         app:tabSelectedTextColor="@color/color_bg_gold">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cars And Vehicles" />
+            android:icon="@drawable/cark"
+            android:text="Cars" />
 
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/home1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Properties" />
+            android:icon="@drawable/propk"
+            android:text="Property" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/home2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:icon="@drawable/classik"
             android:text="Classifieds" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/home3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:icon="@drawable/businessk"
             android:text="Business And Industry" />
 
     </com.google.android.material.tabs.TabLayout>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
