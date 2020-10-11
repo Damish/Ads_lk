@@ -120,7 +120,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/spinner_background"
         android:ems="10"
         android:entries="@array/categories_Location" />
@@ -138,8 +138,8 @@
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:background="@drawable/buttonk_customize"
-            android:drawableLeft="@drawable/cancelk"
-            android:paddingStart="20dp"
+            android:drawableLeft="@drawable/cancelkisal"
+            android:paddingStart="45dp"
             android:text="Cancel"
             android:textColor="#FFFF" />
 
@@ -150,7 +150,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_weight="2"
             android:background="@drawable/buttonk_customize"
-            android:drawableLeft="@drawable/saveki"
+            android:drawableLeft="@drawable/savekisal"
             android:paddingStart="20dp"
             android:text="Save"
             android:textColor="#FFFF" />

@@ -165,14 +165,15 @@
                 android:id="@+id/add_img_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="150dp"
+                android:layout_marginHorizontal="160dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/buttonk_customize"
+                android:drawableLeft="@drawable/pluskisalad"
                 android:text="Add Image"
-                android:textColor="#FFFF"
                 android:textAllCaps="false"
+                android:textColor="#FFFF"
                 tools:layout_marginHorizontal="150dp" />
 
             <TextView
@@ -249,15 +250,14 @@
             <Button
                 android:id="@+id/submit_btn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="80dp"
                 android:layout_marginBottom="50dp"
-                android:background="@drawable/adapter_border_1"
-                android:drawableLeft="@drawable/submiticon"
-                android:paddingStart="60dp"
+                android:background="@drawable/custom_btn_d2"
+                android:drawableLeft="@drawable/submitkisal"
+                android:paddingStart="15dp"
                 android:text="Submit"
-                android:textColor="@color/color_bg_gold"
-                android:textSize="24sp"
+                android:textColor="#ffff"
                 android:textStyle="bold" />
 
             <View

@@ -96,14 +96,39 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button_cla_search"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="45dp"
-            android:background="@drawable/adapter_border_1"
-            android:drawableLeft="@drawable/serchicon50"
-            android:paddingHorizontal="20dp"
-            android:text="Advanced Search" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:text="Reset"
+                android:background="@drawable/custom_btn_reset_d2"
+                android:paddingHorizontal="20dp"
+                android:drawableLeft="@drawable/ic_reset"/>
+
+            <Button
+                android:id="@+id/button_cla_search"
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/custom_btn_d2"
+                android:drawableLeft="@drawable/ic_search_d"
+                android:paddingHorizontal="20dp"
+                android:text=" Search" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </LinearLayout>

@@ -148,7 +148,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttonk_customize"
-                    android:drawableLeft="@drawable/pwdicon"
+                    android:drawableLeft="@drawable/resetmanjip"
                     android:text="Edit Password"
                     android:textColor="#FFFF"
                     android:textSize="12sp" />
@@ -160,7 +160,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttonk_customize"
-                    android:drawableLeft="@drawable/editpro"
+                    android:drawableLeft="@drawable/editprokisal"
                     android:text="Edit Profile"
                     android:textColor="#FFFF"
                     android:textSize="12sp" />
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/buttonk_customize"
-                android:drawableLeft="@drawable/feedbackk"
+                android:drawableLeft="@drawable/feedkisal"
                 android:paddingHorizontal="70dp"
                 android:paddingStart="70dp"
                 android:text="Feedback"
